@@ -1,4 +1,3 @@
-![image](https://github.com/tailanpatrick/to-do-list-js/assets/146599324/c53d1b47-bba6-4125-a355-dc84240b0fdf)
 
 Lista de tarefas desenvolvida em HTML, CSS e JavaScript.
 
