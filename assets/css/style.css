@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Protest+Revolution&display=swap');
+
+:root {
+    --color-light-blue: #DAE0F5;
+    --color-gray:#9AA0A6;
+    --color-primary: #A879E2;
+    --color-primary-dark:#391253;
+    --color-white: #F5F5F5;
+    --color-black:#282828;
+    --color-dark-red: #B91D47;
+    --color-red: #ff0040;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--color-light-blue);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Exo 2", sans-serif;
+    overflow-y: hidden;
+}
+
+header {
+    background-color: var(--color-white);;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0px;
+    font-style: italic;
+}
+
+.container {
+    width: 600px;
+    max-width: 100vw;
+}
+
+.box-input {
+    display: flex;
+    background-color: var(--color-primary);
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+    height: 91.0352px;   
+}
+
+.box-task {
+    background-color: var(--color-white);
+    height: 74.5vh;
+    padding: 20px;
+    overflow: auto;
+}
+
+.box-task button {
+    background: transparent;
+    border: none;
+}
+
+.box-input input{
+    width:75%;
+    border: none;
+    height: 51.8438px;
+    font-size: 24px;
+    outline: none;
+    padding: 1px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Exo 2", sans-serif;
+
+}
+
+.box-input button {
+    width: 17%;
+    height: 90%;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--color-white);
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+button:active,
+button:focus {
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* Remover destaque do botão ao tocar em dispositivos móveis */
+  box-shadow: none; /* Remover qualquer sombra que possa aparecer */
+  
+}
+.plus-icon{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.plus-icon img:hover {
+    -webkit-filter: drop-shadow(50px 20px 4px var(--color-primary));
+    filter: drop-shadow(2px 2px 4px var(--color-primary));
+}
+
+.task {
+    position: relative;
+    padding: 20px; /* Ajuste conforme necessário */
+    border: 1px solid var(--color-black);
+    border-top: 0px;
+}
+
+.task:first-child{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top: 1px solid var(--color-black);
+}
+
+.task:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+  
+.delete-icon {
+    position: absolute;
+    right:50px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+  
+.delete-icon:hover{
+    -webkit-filter: drop-shadow(2px 2px 1px var(--color-dark-red));
+    filter: drop-shadow(2px 2px 1px var(--color-dark-red));
+}
+
+.task-content {
+    display: inline-block;
+    width: 400px;
+    font-size: 24px;
+    font-weight: bold;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.palete {
+    position: absolute;
+    top:10px;
+    right: 20px;
+    cursor: pointer;
+    width: 50px;
+}
+
+body.black .box-task, 
+body.black header
+{
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+body.black {
+    background-color: var(--color-gray);
+}
+
+body.black .box-input {
+    background-color: var(--color-primary-dark);
+}
+
+body.black .task {
+    border: 1px solid var(--color-white);
+}
+
+body.black .delete-icon:hover{
+    -webkit-filter: drop-shadow(2px 2px 4px var(--color-red));
+    filter: drop-shadow(2px 2px 3px var(--color-red));
+}
