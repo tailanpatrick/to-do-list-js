@@ -55,7 +55,6 @@ function scopeMain() {
     function loadSavedTasks() { 
         const tasksSaved =  localStorage.getItem('tasks');
         const listOfTasks = JSON.parse(tasksSaved);
-        console.log(listOfTasks);
 
         listOfTasks.forEach(task => {
             createTask(task);
